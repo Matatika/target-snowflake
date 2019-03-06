@@ -360,9 +360,7 @@ class TargetSnowflake:
             # No support for that type of message yet
             LOGGER.warn("ACTIVATE_VERSION message")
         else:
-            raise Exception(
-                "Unknown message type {} in message {}".format(o["type"], o)
-            )
+            LOGGER.warn("Skipping unknown message type {}.".format(o["type"]))
 
         # flush expired buffers
         for stream in (

@@ -25,6 +25,8 @@ setup(
         # conflicts resolution, see https://gitlab.com/meltano/meltano/issues/193
         'idna==2.7',
         'boto3==1.21',
+        # conflicts resolution
+        'SQLAlchemy<1.4.42',
     ],
     extras_require={
         'dev': [
